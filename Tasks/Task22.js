@@ -7,10 +7,10 @@ const Task22=() => {
   
   return(
     <View >
-    <Text style={{fontSize:30}}>RN Task22</Text>
-    <Text style={{fontSize:20}}>{content}</Text>
-    <MyFunctionPage changeTxt={setContent} />
-  </View> 
+        <Text style={{fontSize:30}}>RN Task22</Text>
+        <Text style={{fontSize:20}}>{content}</Text>
+        <MyFunctionPage changeTxt={setContent} />
+    </View> 
   )
 }
 
