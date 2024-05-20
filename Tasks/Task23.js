@@ -9,17 +9,17 @@ class Task23 extends React.Component{
             text:''
         }
     }
-    updateText(val){
-        this.setState({text:val})
-    }
 
+    updateText = (newText) =>{
+        this.setState({text : newText})
+    }
+   
     render(){
         return(
             <View>
                 <Text style={{fontSize:30}}>RN Task23</Text>
-                <TextInput placeholder='Please Enter Text here'
-                onChangeText={(txt) => this.updateText(txt)}></TextInput>
-                <MyClassPage name={this.state.text} />
+                <Text style={{fontSize:30}}>{this.state.text}</Text>
+                <MyClassPage updateText= {this.updateText} />
             </View>
         )
     }
@@ -29,7 +29,8 @@ class MyClassPage extends React.Component{
     render(){    
         return(
         <View >
-            <Text style={{fontSize:20, color:'red'}}>{this.props.name}</Text>
+            <TextInput placeholder='Please Enter Text here'
+                onChangeText={(txt) => this.props.updateText(txt)}></TextInput>
         </View>
         )
       }
