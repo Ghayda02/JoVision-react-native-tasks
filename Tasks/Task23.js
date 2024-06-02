@@ -26,6 +26,7 @@ class Task23 extends React.Component{
 }
 
 class MyClassPage extends React.Component{  
+    
     render(){    
         return(
         <View >
